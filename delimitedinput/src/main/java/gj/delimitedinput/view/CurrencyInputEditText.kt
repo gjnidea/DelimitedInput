@@ -27,7 +27,11 @@ class CurrencyInputEditText: TextInputEditText {
     }
 
     fun getBigDecimal(): BigDecimal {
-        return filteredInput().toBigDecimal()
+        var input = filteredInput()
+        if (input.isEmpty()) {
+            input = "0"
+        }
+        return input.toBigDecimal()
     }
 
     fun getStringInput(): String {
@@ -38,11 +42,11 @@ class CurrencyInputEditText: TextInputEditText {
         var input = text.toString().replace(",", "")
 
         // user might input "3." then submit it to some api
-        if (input[input.length - 1] == '.') {
+        if (input.indexOf(".") == input.length) {
             input = input.replace(".", "")
         }
 
-        return input
+        return input.trim()
     }
 
 }
