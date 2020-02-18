@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val delimited = findViewById<DelimitedInputEditText>(R.id.delimited_text)
         val currency = findViewById<CurrencyInputEditText>(R.id.currency_text)
 
-        currency.setText(" ")
+        currency.setText("")
 
         findViewById<Button>(R.id.click_me).setOnClickListener {
             Log.e("asdf", delimited.getInput())

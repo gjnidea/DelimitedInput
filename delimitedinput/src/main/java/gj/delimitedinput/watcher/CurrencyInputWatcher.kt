@@ -23,9 +23,9 @@ class CurrencyInputWatcher: TextWatcher {
         val prevLen = s!!.length
         val currentCursorPosition = editText.selectionEnd
 
-        // reattach fraction part after adding comma.
-        // not sure how to include decimals in numberFormat
-        val filteredInput = s.toString().replace(",", "")
+        // setting min/max decimal place here will mess up typing of user.
+        // better to strip the decimal part the reattach again
+        val filteredInput = s.toString().replace(",", "").replace(" ", "")
         val fractionInd = filteredInput.indexOf(".")
 
         var wholeNumber = filteredInput

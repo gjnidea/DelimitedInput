@@ -21,8 +21,23 @@ Automatically place delimiter as the user types.
     2) `getStringInput(): String` - 1000 of type String
 
 	You can use the `editText.text.toString()` to get `1,000`
+	
+	<i>attributes:</i>
+	
+	1) min_decimal_place (int) - specifies the minimum decimal place. Default value is `2`.
+	2) max_decimal_place (int) - specifies the maximum decimal place. Default value is `2`.
+	3) apply_decimal (boolean) - if false, will not apply the min/max decimal place. Default value is `true`
 
 ## Usage
+
+Add in your root build.gradle:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 
 Add in gradle
 
@@ -42,4 +57,6 @@ For **CurrencyInputEditText**:
 
 	<gj.delimitedinput.view.CurrencyInputEditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+		app:min_decimal_place="3"
+		app:max_decimal_place="3" />

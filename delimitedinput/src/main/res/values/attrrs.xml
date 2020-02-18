@@ -4,4 +4,10 @@
         <attr name="member_count" format="integer" />
         <attr name="delimiter" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="Currency">
+        <attr name="min_decimal_place" format="integer" />
+        <attr name="max_decimal_place" format="integer" />
+        <attr name="apply_decimal" format="boolean" />
+    </declare-styleable>
 </resources>
