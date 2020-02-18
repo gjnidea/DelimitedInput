@@ -19,11 +19,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <gj.delimitedinput.view.CurrencyInputEditText
+        android:id="@+id/currency_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="enter amount here"
         app:layout_constraintTop_toBottomOf="@id/delimited_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/click_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="click me"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

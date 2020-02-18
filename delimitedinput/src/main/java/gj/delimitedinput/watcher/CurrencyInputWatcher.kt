@@ -18,9 +18,9 @@ class CurrencyInputWatcher: TextWatcher {
 
 
     override fun afterTextChanged(s: Editable?) {
-        if (s.isNullOrEmpty()) return
+        if (s?.trim().isNullOrEmpty()) return
 
-        val prevLen = s.length
+        val prevLen = s!!.length
         val currentCursorPosition = editText.selectionEnd
 
         // reattach fraction part after adding comma.
